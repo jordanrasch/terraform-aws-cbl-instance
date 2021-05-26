@@ -6,7 +6,7 @@ provider "aws" {
 data "aws_ssm_parameter" "cathay-ami" {
   name = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
 }
-
+//new version comment
 resource "aws_instance" "cathay-module-example" {
   #use the value provided by
   ami               = data.aws_ssm_parameter.cathay-ami.value

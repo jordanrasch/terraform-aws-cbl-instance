@@ -1,4 +1,16 @@
 <!-- BEGIN_TF_DOCS -->
+## examples
+ ~~~
+resource "aws_instance" "cathay-module-example" {
+  #use the value provided by
+  ami               = data.aws_ssm_parameter.cathay-ami.value
+  instance_type     = var.instance-type
+  availability_zone = var.instance-az
+  count  
+ ~~~
+
+
+
 ## Requirements
 
 No requirements.
